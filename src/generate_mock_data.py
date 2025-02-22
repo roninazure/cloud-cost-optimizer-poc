@@ -7,9 +7,17 @@ def generate_mock_billing_data(output_file='data/mock_billing_data.csv', num_rec
     Generates synthetic billing data for demonstration.
     """
     header = [
-        "resource_id", "resource_type", "date",
-        "usage_hours", "cost", "cpu_utilization"
-    ]
+    "resource_id", 
+    "resource_type", 
+    "date",
+    "usage_hours", 
+    "cost", 
+    "cpu_utilization",
+    "memory_utilization",   # new
+    "io_usage",             # new (could be IOPS or MB/s)
+    "storage_used_gb"       # new
+] 
+
     resources = ["EC2-i1", "EC2-i2", "EC2-i3", "EC2-i4"]
     resource_types = ["t2.micro", "t2.large", "m5.large"]
 
